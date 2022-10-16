@@ -2,6 +2,7 @@ import React from 'react';
 import ContactForm from './ContactForm/ContactForm'
 import ContactList from './ContactList/ContactList';
 import Filter from './Filter/Filter';
+import { nanoid } from 'nanoid'
 
 class App extends React.Component {
 
@@ -16,6 +17,7 @@ class App extends React.Component {
   };
 
   addContact = newContact => {
+    newContact.id = nanoid(7);
     for (const contact of this.state.contacts) {
       if (newContact.name === contact.name) {
         alert(newContact.name + ' is already in contacts')

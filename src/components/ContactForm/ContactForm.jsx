@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import { nanoid } from 'nanoid'
 import css from './ContactForm.module.css'
 
@@ -19,7 +19,7 @@ class ContactForm extends Component {
   
     handleSabmit = event => {
         event.preventDefault();
-        this.state.id = nanoid(7);
+
         this.props.onFormSubmit(this.state);
         this.reset();
     };
