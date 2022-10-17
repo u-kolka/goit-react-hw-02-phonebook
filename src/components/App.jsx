@@ -24,8 +24,6 @@ class App extends React.Component {
         alert(newContact.name + ' is already in contacts')
         return
       }
-              console.log(newContact.name)
-        console.log(contact.name)
     }
 
     this.setState(({ contacts }) => ({
@@ -49,7 +47,6 @@ class App extends React.Component {
 
     return contacts.filter(contact => contact.name.toLowerCase().includes(normalizedFilter));
   }
-
 
   render() {
 
